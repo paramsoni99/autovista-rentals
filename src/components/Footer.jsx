@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <div className="text-2xl">Footer</div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

@@ -1,4 +1,4 @@
-import HeroSection from "../sections/HeroSection"
+import HeroSection from "../sections/HeroSection";
 // import all sections imports here
 
 const HomePage = () => {
@@ -7,7 +7,7 @@ const HomePage = () => {
         <HeroSection/>
     </div>
 
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;

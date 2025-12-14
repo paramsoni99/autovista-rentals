@@ -1,7 +1,7 @@
 const NavBar = () => {
   return (
-    <div className='text-2xl'>NavBar</div>
-  )
-}
+    <div className="text-2xl">NavBar</div>
+  );
+};
 
-export default NavBar
+export default NavBar;
