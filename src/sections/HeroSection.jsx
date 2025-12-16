@@ -15,23 +15,23 @@ const HeroSection = () => {
                   {/* sub head */}
                     <div className="mb-4">
                       <div className="bg-zinc-300/20 text-zince-50 reounded-fiull px-4 -y-1 text-sm font-medium inline-flex items-center clash-display">
-                        <Sparkles className=""/> Your Journey, Elevated with Autovista Rentals  
+                        <Sparkles className="h-3.5 w-3.5 mr-1"/> Your Journey, Elevated with Autovista Rentals  
                       </div>
                     </div>
                   {/* main head */}
 
-                  <h1 className="">
-                    <span className="">Premium </span> Cars, <br /> Rentals
+                  <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold lg:leading-20 mb-6 clash-display text-nowrap tracking-tight">
+                    <span className="grad1 clash-display">Premium </span> Cars, <br /> Rentals
                   </h1>
               </div>
 
           </div>
           {/* right */}
           
-          <div className="">
+          <div className="right">
             
-            <p className=""> Unlock unparalleled freedom with our premium car rental service 
-             <br className=""/> Experience luxury, comfort, and seamless booking on every journey.     
+            <p className="text-lg z-10 text-gray-200 mb-8 max-w-md"> Unlock unparalleled freedom with our premium car rental service.
+             <br className="hidden md:block"/> Experience luxury, comfort, and seamless booking on every journey.     
             </p>
             </div>        
 
