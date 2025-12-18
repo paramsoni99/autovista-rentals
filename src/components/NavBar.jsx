@@ -31,7 +31,7 @@ useEffect(() => {
 const getNavLinkCLass = ({isActive}) => isActive ? "text-white p-5 bg-zinc-950 transition" : "hover:text-white text-zinc-800 border-b border-b-zinc-200 p-5 hover:bg-zinc-900 transition";
 
   return (
-    <header className={`fixed cursor-pointer top-3.5 left-1/2 -translate-x-1/2 z-9 transition-all duration-300 rounded-full h-14
+    <header className={`fixed cursor-pointer top-3.5 left-1/2 -translate-x-1/2 z-50  transition-all duration-300 rounded-full h-14
     ${
       isScrolled ? " bg-zinc-900/50 backdrop-blur-xl border border-white/10 scale-95 w-[90%] max-w-3xl": "bg-zinc-200 w-[95%] max-w-4xl"
     }`}>
@@ -103,7 +103,7 @@ const getNavLinkCLass = ({isActive}) => isActive ? "text-white p-5 bg-zinc-950 t
             {isOpen ? ( 
               <X size={34} className="text-zinc-800" /> 
             ) : ( 
-            <Menu size={40} className="text-zinc-800 mt-2" />
+            <Menu size={40} className={`${isScrolled ? "text-zinc-200" : "text-zinc-800"} mt-2`} />
             )}
 
           </button>
