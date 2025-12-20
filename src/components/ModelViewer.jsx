@@ -2,6 +2,7 @@ import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect, useState } from "react";
 import { OrbitControls, Environment, Stage } from "@react-three/drei";
 
+
 //model imports
 import { Monkey } from "./models/Monkey";
 
@@ -23,7 +24,7 @@ const ModelViewer = () => {
 
   return (
     <Canvas
-      className={{ position: [0.1, 0.1, 0.2], fov: 20 }}
+      camera={{ position: [0.1, 0.1, 0.2], fov: 20 }}
       gl={{
         antialias: true,
         preserveDrawingBuffer: "high-performance",
@@ -39,6 +40,7 @@ const ModelViewer = () => {
       <Suspense fallback={null}>
         <Stage environment="city" intensity={0.6}>
           {/*put any model on stage */}
+          <Monkey />
         </Stage>
         {/* lighting */}
 
@@ -49,9 +51,9 @@ const ModelViewer = () => {
           enablePan={true}
           autoRotate={true}
           autoRotateSpeed={1}
-        //   minDistance={6}
-        //   maxDistance={12}
-        //   maxPolarAngle={Math.PI / 2 - 0.1}
+          //   minDistance={6}
+          //   maxDistance={12}
+          //   maxPolarAngle={Math.PI / 2 - 0.1}
         />
       </Suspense>
     </Canvas>

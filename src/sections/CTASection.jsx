@@ -1,6 +1,7 @@
 import BookNowButton from "./../components/BookNowButton";
 import { togglerBtns } from "../assets/assets";
 import { useState } from "react";
+import ModelViewer from './../components/ModelViewer';
 
 const CTASection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -39,6 +40,8 @@ const CTASection = () => {
           <div className="absolute hidden lg:block bg-transparent inset-0">
             {/* 3d canvas component */}
             
+              <ModelViewer />
+
             </div>
 
           {/* decor:side overlays */}
