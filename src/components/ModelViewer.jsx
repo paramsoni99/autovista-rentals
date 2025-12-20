@@ -1,19 +1,16 @@
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect, useState } from "react";
-import { OrbitControls, Environment, Stage } from "@react-three/drei";
-
-
-//model imports
+import { OrbitControls, Stage } from "@react-three/drei";
 import { Monkey } from "./models/Monkey";
+import { Porcar } from './models/2021_por';
 
 const ModelViewer = () => {
   const [webglSupported, setwebglSupported] = useState(true);
-  // device suppoort check for webgl
+
   useEffect(() => {
     try {
       const canvas = document.createElement("canvas");
-      const gl =
-        canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
+      const gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
       if (!gl) setwebglSupported(false);
     } catch (error) {
       setwebglSupported(false);
@@ -24,36 +21,25 @@ const ModelViewer = () => {
 
   return (
     <Canvas
-      camera={{ position: [0.1, 0.1, 0.2], fov: 20 }}
-      gl={{
-        antialias: true,
-        preserveDrawingBuffer: "high-performance",
-      }}
+      // FIXED: Moved camera back so the model is visible
+      camera={{ position: [5, 5, 5], fov: 35 }}
+      gl={{ antialias: true }}
       style={{ width: "100%", height: "100%" }}
-      onCreated={(gl) => {
-        gl.getContext().canvas.addEventListener("webglcontextlost", (e) => {
-          e.preventDefault();
-          alert("WebGl context lost- reload the ps page. ");
-        });
-      }}
     >
       <Suspense fallback={null}>
-        <Stage environment="city" intensity={0.6}>
-          {/*put any model on stage */}
-          <Monkey />
-        </Stage>
-        {/* lighting */}
+        {/* Stage handles lighting and auto-centering the model */}
+        <Stage environment="city" intensity={0.6} contactShadow={false}>
+          
+          {/* <Monkey /> */}
 
-        <Environment preset="city" />
-        {/* controls: scence ux  */}
-        <OrbitControls
-          enableZoom={true}
-          enablePan={true}
-          autoRotate={true}
-          autoRotateSpeed={1}
-          //   minDistance={6}
-          //   maxDistance={12}
-          //   maxPolarAngle={Math.PI / 2 - 0.1}
+          <Porcar />
+
+        </Stage>
+        <OrbitControls 
+          enableZoom={true} 
+          autoRotate 
+          autoRotateSpeed={4.3} 
+          maxPolarAngle={Math.PI / 2 - 0.05}
         />
       </Suspense>
     </Canvas>

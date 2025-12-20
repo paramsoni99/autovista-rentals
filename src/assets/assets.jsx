@@ -319,6 +319,27 @@ const goodColors = [
   "#708090", // Slate Gray Metallic (Slightly bluish-gray, sophisticated)
   "#BDB76B", // Dark Khaki (Earth tone, military-inspired)
 ];
+// src/assets/assets.jsx
+
+export const porscheColors = [
+  "#FFFFFF", // White (Solid)
+  "#000000", // Black (Solid)
+  "#0B0C0E", // Jet Black Metallic
+  "#A5A9B4", // GT Silver Metallic
+  "#003057", // Gentian Blue Metallic
+  "#D8DCE0", // Ice Grey Metallic
+  "#4A4E52", // Vanadium Grey Metallic
+  "#E2B400", // Cartagena Yellow Metallic
+  "#4B534A", // Aventurine Green Metallic
+  "#D5001C", // Guards Red (Solid)
+  "#9B001F", // Carmine Red
+  "#2D3A2D", // Oak Green Metallic Neo
+  "#5E6264", // Slate Grey Neo
+  "#D7D7D2", // Chalk
+  "#0070B0", // Shark Blue
+  "#004D85", // Lugano Blue
+  "#B8B8D1", // Provence (Soft Lavender-Blue)
+];
 
 export {
   images,
