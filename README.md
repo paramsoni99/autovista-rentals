@@ -1,7 +1,7 @@
 ![Wallpaper Car GIF](https://media1.tenor.com/m/6NxALKivEZ8AAAAd/wallpaper-car.gif)
 
 
-# 🏎️ AutoVista Rentals
+# 🏎️ AutoVista Rentals Scope and Usecase:
 
 A premium car rental landing page project built to explore the integration of **3D scenes** within modern 2D web layouts. This project serves as a creative playground for learning **React Three Fiber** and advanced animation techniques.
 
